@@ -1,5 +1,5 @@
 /**
- * A pet with a name and an owner.
+ * A pet with a name and an owner. 
  */
 public class Pet 
 {
