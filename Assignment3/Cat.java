@@ -1,3 +1,6 @@
+/**
+ * A Cat with a name and an owner, extends Pet class. 
+ */
 public class Cat extends Pet
 {
 	/** color of the dog*/

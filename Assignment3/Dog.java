@@ -1,3 +1,6 @@
+/**
+ * A Dog with a name and an owner, extends Pet class. 
+ */
 public class Dog extends Pet
 {
 	/** Breed of the dog*/

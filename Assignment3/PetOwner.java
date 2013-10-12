@@ -1,6 +1,10 @@
 import java.util.LinkedList;
 import java.util.ListIterator;
 
+/** 
+ * Model of a PetOwner, subclass of Person. Adds linked
+ * list functionality.
+ */
 public class PetOwner extends Person
 {
 	/** LinkedList to hold pets */
@@ -105,7 +109,8 @@ public class PetOwner extends Person
 			System.out.println("The test ran successfully for PetOwner.");
 		else
 		{
-		System.out.println("\nThe number of errors found is " + numErrors);
+		System.out.println("\nThe number of errors found is " 
+					+ numErrors);
 		}
 
 	}
