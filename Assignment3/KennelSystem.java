@@ -98,7 +98,7 @@ public class KennelSystem
 		tempName = inputString();
 		System.out.println("What is the name of the owner?");
 		tempOwner = inputString();
-		if (myKennel.hasOwner(tempOwner)
+		if (myKennel.hasOwner(tempOwner))
 		{
 			System.out.println("What breed is the dog?");
 			tempBreed = inputString();
@@ -124,10 +124,10 @@ public class KennelSystem
 		tempName = inputString();
 		System.out.println("What is the name of the owner?");
 		tempOwner = inputString();
-		if (myKennel.hasOwner(tempOwner)
+		if (myKennel.hasOwner(tempOwner))
 		{
 			System.out.println("What color is the cat?");
-			tempBreed = inputString();
+			tempColor = inputString();
 			myKennel.getOwner(tempOwner);
 			Cat tempCat = new Cat(tempName, myKennel.getOwner(tempOwner), tempColor);
 			myKennel.getOwner(tempOwner).addPet(tempCat);
