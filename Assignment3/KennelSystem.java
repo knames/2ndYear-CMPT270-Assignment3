@@ -55,7 +55,7 @@ public class KennelSystem
 				DisplaySystemState();
 			}
 			else if (userInput == 1)
-				myKennel.addOwner(AddOwner()); // what do i do here ADDS OWNERS BUT PET KENNEL HAS NO PETS SO IT DOESNT CRASH / EXCEPTION
+				AddOwner(); // what do i do here ADDS OWNERS BUT PET KENNEL HAS NO PETS SO IT DOESNT CRASH / EXCEPTION
 			else if (userInput == 2)
 				AddDog();
 			else if (userInput == 3)
@@ -73,7 +73,7 @@ public class KennelSystem
 	}
 	
 
-	private PetOwner AddOwner() 
+	private void AddOwner() 
 	{
 		String tempName;
 		String tempAddress;
@@ -83,18 +83,61 @@ public class KennelSystem
 		System.out.println("What is the Owner's address?");
 		tempAddress = inputString();
 		tempOwner = new PetOwner(tempName, tempAddress);
-		return tempOwner;
+		myKennel.addOwner(tempOwner);
 		
 		
 	}
 
-	private void AddDog() {
+	private void AddDog() 
+	{
 		// TODO Auto-generated method stub
-		
+		String tempName;
+		String tempOwner;
+		String tempBreed;
+		System.out.println("What is the dog's name?");
+		tempName = inputString();
+		System.out.println("What is the name of the owner?");
+		tempOwner = inputString();
+		if (myKennel.hasOwner(tempOwner)
+		{
+			System.out.println("What breed is the dog?");
+			tempBreed = inputString();
+			myKennel.getOwner(tempOwner);
+			Dog tempDog = new Dog(tempName, myKennel.getOwner(tempOwner), tempBreed);
+			myKennel.getOwner(tempOwner).addPet(tempDog);
+		}
+		else
+		{
+			System.out.println(tempOwner+ " was not found in the system."
+					+ " Please try again.");
+			
+		}
+
 	}
 
 	private void AddCat() {
 		// TODO Auto-generated method stub
+		String tempName;
+		String tempOwner;
+		String tempColor;
+		System.out.println("What is the cat's name?");
+		tempName = inputString();
+		System.out.println("What is the name of the owner?");
+		tempOwner = inputString();
+		if (myKennel.hasOwner(tempOwner)
+		{
+			System.out.println("What color is the cat?");
+			tempBreed = inputString();
+			myKennel.getOwner(tempOwner);
+			Cat tempCat = new Cat(tempName, myKennel.getOwner(tempOwner), tempColor);
+			myKennel.getOwner(tempOwner).addPet(tempCat);
+		}
+		else
+		{
+			System.out.println(tempOwner+ " was not found in the system."
+					+ " Please try again.");
+			
+		}
 		
 	}
 
