@@ -72,7 +72,8 @@ public class KennelSystem
 		} while (!quitCalled);
 	}
 	
-
+	/** Add's an owner to the system.
+	@p*/
 	private void AddOwner() 
 	{
 		String tempName;
@@ -145,16 +146,63 @@ public class KennelSystem
 		System.out.println(myKennel.listPenOccupancy(myKennel));
 	}
 
-	private void AssignPetToPen() {
+	private void AssignPetToPen() 
+	{
 		// TODO Auto-generated method stub
-		System.out.println("What is the name of the pet you"
-				+ " are placing in the kennel?");
-		System.out.println()//do this shit
+		boolean hasSpot = false;
+		for (int i = 1; i<myKennel.size(); i++)
+		{
+			if (!myKennel.hasOccupant(i)
+			{
+				hasSpot = true;
+				i = myKennel.size()+1; //ends loop prematurely
+			}
+		}
+		if (!hasSpot)
+		{
+			System.out.println("All of the kennels are full");
+		}
+		else
+		{
+			System.out.println("What is the name of the pet you"
+					+ " are placing in the kennel?");
+			String tempPet = inputString();
+			if (myKennel.hasPet(tempPet))
+			{
+				System.out.println(tempPet + " is already in  kennel #"
+					+ myKennel.penNumberOf(tempPet) + ".");
+			}
+			else 
+			{
+				System.out.println("Which kennel would you like to place " 
+					+ "the pet in?");
+				System.out.println(myKennel.listPenOccupancy(myKennel));
+				int tempPenNumber = inputInt();
+				while (myKennel.hasOccupant(tempPenNumber)
+				{
+					System.out.println("There is already a pet in Kennel # " 
+						+ "please choose an unoccupied kennel.");
+						tempPenNumber = inputInt();
+				}
+				myKennel.insert(tempPet, tempPenNumber);
+			}
+		}
 	}
 
-	private void ReleasePetFromPen() {
+	private void ReleasePetFromPen() 
+	{
 		// TODO Auto-generated method stub
-		
+		String tempPet;
+		System.out.println("What is the name of the pet you would "
+		 	+ "like to release?");
+		System.out.println(myKennel.listPenOccupancy(myKennel);
+		tempPet = inputString();
+		while (!myKennel.hasPet(tempPet))
+		{
+			System.out.println(tempPet + "Was not found in the Kennels. "
+				+ "Please choose a pet that is in the Kennels to remove.");
+			tempPet = inputString;
+		}
 	}
 
 	private void DisplaySystemState() {
