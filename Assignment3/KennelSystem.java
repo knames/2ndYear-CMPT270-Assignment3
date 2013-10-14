@@ -55,7 +55,7 @@ public class KennelSystem
 				DisplaySystemState();
 			}
 			else if (userInput == 1)
-				AddOwner(); // what do i do here ADDS OWNERS BUT PET KENNEL HAS NO PETS SO IT DOESNT CRASH / EXCEPTION
+				AddOwner();
 			else if (userInput == 2)
 				AddDog();
 			else if (userInput == 3)
@@ -90,7 +90,6 @@ public class KennelSystem
 
 	private void AddDog() 
 	{
-		// TODO Auto-generated method stub
 		String tempName;
 		String tempOwner;
 		String tempBreed;
@@ -115,8 +114,8 @@ public class KennelSystem
 
 	}
 
-	private void AddCat() {
-		// TODO Auto-generated method stub
+	private void AddCat() 
+	{
 		String tempName;
 		String tempOwner;
 		String tempColor;
@@ -141,14 +140,16 @@ public class KennelSystem
 		
 	}
 
-	private void DisplayPenOccupant() {
-		// TODO Auto-generated method stub
-		
+	private void DisplayPenOccupant() 
+	{
+		System.out.println(myKennel.listPenOccupancy(myKennel));
 	}
 
 	private void AssignPetToPen() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("What is the name of the pet you"
+				+ " are placing in the kennel?");
+		System.out.println()//do this shit
 	}
 
 	private void ReleasePetFromPen() {
