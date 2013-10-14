@@ -73,7 +73,7 @@ public class KennelSystem
 	}
 	
 	/** Add's an owner to the system.
-	@p*/
+	  * @postcond an Owner is added to the system*/
 	private void AddOwner() 
 	{
 		String tempName;
@@ -88,7 +88,9 @@ public class KennelSystem
 		
 		
 	}
-
+	
+	/** Add's a dog to the system.
+	  * @postcond a Dog is added to the system*/
 	private void AddDog() 
 	{
 		String tempName;
@@ -115,6 +117,8 @@ public class KennelSystem
 
 	}
 
+	/** Add's a Cat to the system.
+	  * @postcond a Cat is added to the system*/
 	private void AddCat() 
 	{
 		String tempName;
@@ -141,14 +145,16 @@ public class KennelSystem
 		
 	}
 
+	/** Displays occupants of all pens*/
 	private void DisplayPenOccupant() 
 	{
 		System.out.println(myKennel.listPenOccupancy(myKennel));
 	}
 
+	/** Assign's a Pet to a pen
+	  * @postcond a pet is placed in one of the kennels*/
 	private void AssignPetToPen() 
 	{
-		// TODO Auto-generated method stub
 		boolean hasSpot = false;
 		for (int i = 1; i<myKennel.size(); i++)
 		{
@@ -189,6 +195,8 @@ public class KennelSystem
 		}
 	}
 
+	/**  Remove's a pet from a given pen
+	  *   @postcond a pet has been removed from the kennel*/
 	private void ReleasePetFromPen() 
 	{
 		// TODO Auto-generated method stub
@@ -203,8 +211,10 @@ public class KennelSystem
 				+ "Please choose a pet that is in the Kennels to remove.");
 			tempPet = inputString;
 		}
+		myKennel.remove(tempPet);
 	}
 
+	/** Displays current state of system*/
 	private void DisplaySystemState() {
 		// TODO Auto-generated method stub
 		System.out.println(myKennel.toString());
