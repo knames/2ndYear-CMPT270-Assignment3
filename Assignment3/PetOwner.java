@@ -63,13 +63,15 @@ public class PetOwner extends Person
 	public Pet grabPet(String petName)
 	{
 		ListIterator<Pet> iter = petList.listIterator();
-		Pet temp = null;
 		while (iter.hasNext())
 		{
-			if (petName == iter.next().getName())
-				temp = iter.next();
+			Pet temp = iter.next();
+			if (temp.getName().equals(petName))
+			{
+				return temp;
+			}
 		}
-		return temp;
+		return null;
 	}
 
 	/** 

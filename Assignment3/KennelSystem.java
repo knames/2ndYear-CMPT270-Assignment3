@@ -10,7 +10,7 @@ public class KennelSystem
 	{
 		System.out.println("How many Kennels"  
 				 + "  would you like to create to get started:");
-		Kennel myKennel = new Kennel(inputInt());
+		myKennel = new Kennel(inputInt());
 		mainMenu();
 		
 	}
@@ -152,21 +152,13 @@ public class KennelSystem
 	}
 
 	/** Assign's a Pet to a pen
-	  * @postcond a pet is placed in one of the kennels*/
+	 *  Assume user enters value between 1 and the kennel size
+	 * @postcond a pet is placed in one of the kennels*/
 	private void AssignPetToPen() 
 	{
-		boolean hasSpot = false;
-		for (int i = 1; i<myKennel.size(); i++)
+		if (isFull())
 		{
-			if (!myKennel.hasOccupant(i))
-			{
-				hasSpot = true;
-				i = myKennel.size()+1; //ends loop prematurely
-			}
-		}
-		if (!hasSpot)
-		{
-			System.out.println("All of the kennels are full");
+			System.out.println("All of the kennels are full.");
 		}
 		else
 		{
@@ -178,6 +170,7 @@ public class KennelSystem
 			}
 			else
 			{
+				System.out.println(myKennel.getOwner(tempOwner).toString());
 				System.out.println("What is the name of the pet you"
 						+ " are placing in the kennel?");
 				String tempPet = inputString();
@@ -188,38 +181,85 @@ public class KennelSystem
 				}
 				else 
 				{
-					System.out.println("Which kennel would you like to place " 
-						+ "the pet in?");
+					System.out.println("Which kennel would you "
+						+ "like to place the pet in?");
 					System.out.println(myKennel.listPenOccupancy(myKennel));
 					int tempPenNumber = inputInt();
+					if (tempPenNumber < 1 || tempPenNumber >myKennel.size())
+					{
+						throw new RuntimeException("You selected a Kennel (" 
+								+ tempPenNumber 
+								+ ") outside of the accepted range");
+					}
 					while (myKennel.hasOccupant(tempPenNumber))
 					{
-						System.out.println("There is already a pet in Kennel # " 
-							+ "please choose an unoccupied kennel.");
+						System.out.println("There is already a pet in that " 
+							+ "kennel. Please choose an unoccupied kennel.");
 							tempPenNumber = inputInt();
 					}
-					myKennel.insert(myKennel.getOwner(tempOwner).grabPet(tempPet), tempPenNumber);
+					System.out.println(myKennel.size());
+					myKennel.insert(myKennel.getOwner(tempOwner)
+							.grabPet(tempPet), tempPenNumber);
 				}
 			}
 		}
+	}
+
+	private boolean isFull() 
+	{
+		int spotCount = 0;
+		for (int i = 1; i<=myKennel.size(); i++)
+		{
+			if (myKennel.hasOccupant(i))
+			{
+				spotCount++;
+			}
+		}
+		if (spotCount == myKennel.size())
+			return true;
+		else
+			return false;
+	}
+	
+	private boolean isEmpty()
+	{
+		int spotCount = 0;
+		for (int i = 1; i<=myKennel.size(); i++)
+		{
+			if (!myKennel.hasOccupant(i))
+			{
+				spotCount++;
+			}
+		}
+		if (spotCount == myKennel.size())
+			return true;
+		else
+			return false;
 	}
 
 	/**  Remove's a pet from a given pen
 	  *   @postcond a pet has been removed from the kennel*/
 	private void ReleasePetFromPen() 
 	{
-		String tempPet;
-		System.out.println("What is the name of the pet you would "
-		 	+ "like to release?");
-		System.out.println(myKennel.listPenOccupancy(myKennel));
-		tempPet = inputString();
-		while (!myKennel.hasPet(tempPet))
+		if (isEmpty())
 		{
-			System.out.println(tempPet + "Was not found in the Kennels. "
-				+ "Please choose a pet that is in the Kennels to remove.");
-			tempPet = inputString();
+			System.out.println("The kennel is already empty.");
 		}
-		myKennel.remove(tempPet);
+		else
+		{
+			String tempPet;
+			System.out.println("What is the name of the pet you would "
+			 	+ "like to release?");
+			System.out.println(myKennel.listPenOccupancy(myKennel));
+			tempPet = inputString();
+			while (!myKennel.hasPet(tempPet))
+			{
+				System.out.println(tempPet + "Was not found in the Kennels. "
+					+ "Please choose a pet that is in the Kennels to remove.");
+				tempPet = inputString();
+			}
+			myKennel.remove(tempPet);
+		}
 	}
 
 	/** Displays current state of system*/
@@ -234,6 +274,7 @@ public class KennelSystem
 	public int inputInt()
 	{
 		int i = 0;
+		@SuppressWarnings("resource")
 		Scanner consoleIn = new Scanner(System.in);
 		boolean successful;
 		do
@@ -259,6 +300,7 @@ public class KennelSystem
 	public String inputString()
 	{
 		String strInput = "";
+		@SuppressWarnings("resource")
 		Scanner consoleIn = new Scanner(System.in);
 		boolean successful;
 		do
@@ -282,6 +324,7 @@ public class KennelSystem
 	
 	public static void main(String[] args)
 	{
+		@SuppressWarnings("unused")
 		KennelSystem mySystem = new KennelSystem();
 	}
 }
