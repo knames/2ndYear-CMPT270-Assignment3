@@ -1,0 +1,27 @@
+// Kennedy Slawinski
+// KTS192
+// 11053598
+// CMPT 270 Assignment 2
+// Due September 30, 2013
+
+Execution:
+In order to run this program, you must have all 4 files in the
+same folder: 
+	-BasicKennel.java
+	-Driver.java
+	-Person.java
+	-Pet.java
+From there, you can compile the program (javac *.java) in
+terminal, and then run the Driver.java program (java Driver).
+
+Status:
+Everything is working. All methods are tested assuming 
+proper input is given. If inproper input is given, methods will
+return false or throw exceptions. In the future, if users are
+allowed to give direct input, one would need to insert more checks
+to catch inproper input.
+
+
+Maintenance Manual: See UML diagram
+
+

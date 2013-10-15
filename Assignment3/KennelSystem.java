@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class KennelSystem
 {
-	private Kennel myKennel;// = new Kennel(1);
+	private Kennel myKennel;
 	/** Initialize System
 	 * @postcond   a new Kennel instance is created*/
 	public KennelSystem()
@@ -204,7 +204,9 @@ public class KennelSystem
 			}
 		}
 	}
-
+	
+	/** Checks if the Kennel is Full
+	 * @return true if full, false otherwise*/
 	private boolean isFull() 
 	{
 		int spotCount = 0;
@@ -221,6 +223,8 @@ public class KennelSystem
 			return false;
 	}
 	
+	/** Checks if the Kennel is Empty
+	 * @return true if empty, false otherwise*/
 	private boolean isEmpty()
 	{
 		int spotCount = 0;
@@ -322,6 +326,7 @@ public class KennelSystem
 		return strInput;
 	}
 	
+	/** A method to test the KennelSystem*/
 	public static void main(String[] args)
 	{
 		@SuppressWarnings("unused")

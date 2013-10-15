@@ -154,7 +154,7 @@ public class Kennel extends BasicKennel
 		}
 		
 		if (numErrors == 0)
-			System.out.println("The test ran successfully for PetOwner.");
+			System.out.println("The test ran successfully for Kennel.");
 		else
 		{
 			System.out.println("\nThe number of errors found is " 

@@ -122,6 +122,12 @@ public class PetOwner extends Person
 			System.out.println("Error, could not find Rex");
 		}
 		
+		if (p.grabPet("Rex") != Rex)
+		{
+			numErrors++;
+			System.out.println("Error, grabPet did not work");
+		}
+		
 		
 		if (numErrors == 0)
 			System.out.println("The test ran successfully for PetOwner.");

@@ -1,0 +1,22 @@
+PROGRAM OUTPUT
+
+- Cat.java
+
+The cat called Burt with owner Frank is colored: white
+
+The number of errors found is 0
+
+- Dog.java
+
+The dog called Rex with owner Frank is of type: Bull
+
+The number of errors found is 0
+
+- PetOwner.java
+
+The test ran successfully for PetOwner.
+
+- Kennel.java
+
+The test ran successfully for Kennel.
+

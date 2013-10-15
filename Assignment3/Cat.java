@@ -34,8 +34,8 @@ public class Cat extends Pet
 	{
 		int numErrors = 0;
 		Person p = new Person("Frank", "Alphabets");
-		Cat cat = new Cat("Stupid", p, "white");
-		System.out.println("The cat called Stupid with owner Frank is "
+		Cat cat = new Cat("Burt", p, "white");
+		System.out.println("The cat called Burt with owner Frank is "
 							+ "colored: " + cat.getColor());
 		if (! cat.getColor().equals("white"))
 		{

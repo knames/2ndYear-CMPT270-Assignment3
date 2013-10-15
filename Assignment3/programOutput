@@ -1,0 +1,223 @@
+PROGRAM OUTPUT
+
+- Cat.java
+
+The cat called Burt with owner Frank is colored: white
+
+The number of errors found is 0
+
+- Dog.java
+
+The dog called Rex with owner Frank is of type: Bull
+
+The number of errors found is 0
+
+- PetOwner.java
+
+The test ran successfully for PetOwner.
+
+- Kennel.java
+
+The test ran successfully for Kennel.
+
+- KennelSystem.java
+
+How many Kennels  would you like to create to get started:
+Enter an integer number:
+2
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+1
+What is the Owner's name?
+Enter alpha-numeric characters:
+Ken
+What is the Owner's address?
+Enter alpha-numeric characters:
+Langham
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+2
+What is the dog's name?
+Enter alpha-numeric characters:
+Rex
+What is the name of the owner?
+Enter alpha-numeric characters:
+Ken
+What breed is the dog?
+Enter alpha-numeric characters:
+Lab
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+3
+What is the cat's name?
+Enter alpha-numeric characters:
+Sanders
+What is the name of the owner?
+Enter alpha-numeric characters:
+Ken
+What color is the cat?
+Enter alpha-numeric characters:
+Orange
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+4
+Kennel Occupancy:
+1: unoccupied
+2: unoccupied
+
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+5
+What is the name of the pet's owner?
+Enter alpha-numeric characters:
+Ken
+Pet's owned: Rex. Sanders. 
+What is the name of the pet you are placing in the kennel?
+Enter alpha-numeric characters:
+Rex
+Which kennel would you like to place the pet in?
+Kennel Occupancy:
+1: unoccupied
+2: unoccupied
+
+Enter an integer number:
+1
+2
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+5
+What is the name of the pet's owner?
+Enter alpha-numeric characters:
+Ken
+Pet's owned: Rex. Sanders. 
+What is the name of the pet you are placing in the kennel?
+Enter alpha-numeric characters:
+Sanders
+Which kennel would you like to place the pet in?
+Kennel Occupancy:
+1: Rex
+2: unoccupied
+
+Enter an integer number:
+2
+2
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+7
+Owners:
+Ken
+-Pet's owned: Rex. Sanders. 
+
+Kennel Occupancy:
+1: Rex
+2: Sanders
+
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+6
+What is the name of the pet you would like to release?
+Kennel Occupancy:
+1: Rex
+2: Sanders
+
+Enter alpha-numeric characters:
+Sanders
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+4
+Kennel Occupancy:
+1: Rex
+2: unoccupied
+
+Main Menu. Please select an option:
+0.  quit
+1.  add a new owner to the system
+2.  add a new dog to the system
+3.  add a new cat to the system
+4.  display the occupant (if any) of every pen
+5.  assign a pet to a pen
+6.  release a pet from its pen
+7.  display current system state
+Enter an integer number:
+0
+Owners:
+Ken
+-Pet's owned: Rex. Sanders. 
+
+Kennel Occupancy:
+1: Rex
+2: unoccupied
+
+
