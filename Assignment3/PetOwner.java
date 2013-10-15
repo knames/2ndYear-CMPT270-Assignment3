@@ -55,6 +55,22 @@ public class PetOwner extends Person
 		}
 		return temp;
 	}
+	
+	/**
+	 * @param petName   name of pet 
+	 * @return a string representation of the pets in the list or
+	 *  null if not found */
+	public Pet grabPet(String petName)
+	{
+		ListIterator<Pet> iter = petList.listIterator();
+		Pet temp = null;
+		while (iter.hasNext())
+		{
+			if (petName == iter.next().getName())
+				temp = iter.next();
+		}
+		return temp;
+	}
 
 	/** 
 	 * A method to test the PetOwner class.
